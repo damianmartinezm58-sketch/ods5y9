@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Industry, Innovation &amp; Equality · SDG 5 + SDG 9</title>
+  <meta name="description" content="An awareness website about SDG 5 (Gender Equality) and SDG 9 (Industry, Innovation and Infrastructure) from Guanajuato, Mexico.">
+  <meta name="theme-color" content="#e7d3ec">
+  <link rel="icon" href="img/emblema.png" type="image/png">
+  <link rel="preload" href="fonts/archivo-variable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/estilos.css">
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+<body>
+  <!-- Every text is filled in from base_de_datos.xlsx (via datos.js). data-t="key" = sheet "Texts". -->
+
+  <!-- Icons and silhouettes drawn for this project (one stroke system) -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <symbol id="i-flecha" viewBox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6"/></symbol>
+      <symbol id="i-externo" viewBox="0 0 24 24"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></symbol>
+      <symbol id="i-light" viewBox="0 0 24 24"><path d="M12 21V9M8 21h8M12 9c-3 0-5-1.5-5-3.5S9 3 12 3s5 .5 5 2.5S15 9 12 9z"/><path d="M5 12l-2 1M19 12l2 1"/></symbol>
+      <symbol id="i-bus" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="13" rx="2"/><path d="M4 11h16M8 17v3M16 17v3"/><circle cx="8" cy="14" r=".6"/><circle cx="16" cy="14" r=".6"/></symbol>
+      <symbol id="i-childcare" viewBox="0 0 24 24"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/><circle cx="12" cy="13" r="2"/><path d="M9 20c0-2 1.3-3.5 3-3.5s3 1.5 3 3.5"/></symbol>
+      <symbol id="i-wifi" viewBox="0 0 24 24"><path d="M12 20l-3-9h6z"/><path d="M7.5 7.5a6.5 6.5 0 0 1 9 0M4.5 4.8a10.5 10.5 0 0 1 15 0"/></symbol>
+      <symbol id="i-lab" viewBox="0 0 24 24"><path d="M9 3h6M10 3v6l-5.5 9.5A1.6 1.6 0 0 0 5.9 21h12.2a1.6 1.6 0 0 0 1.4-2.5L14 9V3"/><path d="M7.5 15h9"/></symbol>
+      <symbol id="i-factory" viewBox="0 0 24 24"><path d="M3 21V11l5 3v-3l5 3v-3l5 3V4h3v17z"/><path d="M7 18h2M12 18h2"/></symbol>
+      <symbol id="i-park" viewBox="0 0 24 24"><path d="M12 3l-5 8h3l-4 6h12l-4-6h3z"/><path d="M12 17v4M4 21h16"/></symbol>
+      <symbol id="i-school" viewBox="0 0 24 24"><path d="M3 9l9-5 9 5-9 5z"/><path d="M7 11.5V17c1.5 1.3 3 2 5 2s3.5-.7 5-2v-5.5M21 9v6"/></symbol>
+      <!-- Silhouettes: lying with bent knees, sitting hugging knees, reclining on an elbow, standing -->
+      <symbol id="fig-tendida" viewBox="0 0 70 28"><g stroke="currentColor" stroke-linecap="round" fill="none"><path d="M14 20 L40 20" stroke-width="9"/><path d="M41 20 L51 9 L62 21" stroke-width="6.5" stroke-linejoin="round"/><path d="M17 18 L9 10" stroke-width="4"/></g><circle cx="8" cy="19" r="5.5"/></symbol>
+      <symbol id="fig-sentada" viewBox="0 0 36 42"><g stroke="currentColor" stroke-linecap="round" fill="none" stroke-linejoin="round"><path d="M11 15 L9 32" stroke-width="9"/><path d="M10 33 L25 22 L28 39" stroke-width="6.5"/><path d="M12 18 L24 24" stroke-width="4"/></g><circle cx="12" cy="7" r="5.5"/></symbol>
+      <symbol id="fig-recostada" viewBox="0 0 66 30"><g stroke="currentColor" stroke-linecap="round" fill="none" stroke-linejoin="round"><path d="M15 16 L40 24" stroke-width="9"/><path d="M40 24 L62 25" stroke-width="6"/><path d="M40 22 L51 14 L60 22" stroke-width="5.5"/><path d="M12 17 L10 27" stroke-width="4"/></g><circle cx="10" cy="9" r="5.5"/></symbol>
+      <symbol id="fig-parada" viewBox="0 0 22 54"><g stroke="currentColor" stroke-linecap="round" fill="none"><path d="M11 15 L11 30" stroke-width="9"/><path d="M9 32 L8 51M13 32 L14 51" stroke-width="4.5"/><path d="M7 17 L5 30M15 17 L17 30" stroke-width="3.5"/></g><circle cx="11" cy="6" r="5.5"/></symbol>
+    </defs>
+  </svg>
+
+  <a class="saltar" href="#sol">Skip to content</a>
+
+  <!-- ===================== TOP BAR ===================== -->
+  <header class="barra">
+    <a href="#inicio" class="marca">
+      <img src="img/emblema.png" alt="Team logo" width="40" height="38">
+      <span><b data-t="sitio_nombre"></b><small data-t="sitio_lema"></small></span>
+    </a>
+    <nav class="menu" id="menu" aria-label="Sections">
+      <a href="#sol" data-t="nav_sol"></a>
+      <a href="#datos" data-t="nav_datos"></a>
+      <a href="#p2050" data-t="nav_2050"></a>
+      <a href="#juegos" data-t="nav_juegos"></a>
+      <a href="#actua" data-t="nav_actua"></a>
+      <a href="#ley" data-t="nav_ley"></a>
+      <a href="#fuentes" data-t="nav_fuentes"></a>
+    </nav>
+    <a href="#juegos" class="btn btn-borde btn-chico barra-cta"><span data-t="nav_boton"></span><svg class="ico"><use href="#i-flecha"/></svg></a>
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="menu" aria-label="Open menu"><span></span><span></span></button>
+  </header>
+
+  <!-- ===================== THE HALL (3D hero) ===================== -->
+  <section class="sala" id="inicio" aria-label="Introduction">
+    <div class="sala-fija">
+      <canvas id="salaCanvas" aria-hidden="true"></canvas>
+
+      <!-- Illustrated fallback when the browser has no 3D -->
+      <div class="sala-respaldo" aria-hidden="true">
+        <div class="sol-css"><span class="mitad-espejo"></span><span class="mitad-real"></span></div>
+        <div class="piso-css"></div>
+      </div>
+
+      <aside class="riel" aria-label="Hall readouts">
+        <dl>
+          <div><dt data-t="rail_ods5"></dt></div>
+          <div><dt data-t="rail_ods9"></dt></div>
+          <div><dt data-t="rail_lugar"></dt></div>
+          <div class="riel-disco">
+            <dt data-t="rail_disco"></dt>
+            <dd><span class="disco-mini" aria-hidden="true"></span><output id="discoPct">50 %</output></dd>
+          </div>
+        </dl>
+        <dl class="riel-cifras" id="cifras"></dl>
+      </aside>
+
+      <h1 class="sala-titulo" data-t="hero_titulo"></h1>
+      <div class="sala-bajo">
+        <p class="sala-lead" data-t="hero_texto"></p>
+        <div class="sala-acciones">
+          <a href="#juegos" class="btn btn-sol"><span data-t="hero_boton_1"></span><svg class="ico"><use href="#i-flecha"/></svg></a>
+          <a href="#datos" class="btn btn-borde"><span data-t="hero_boton_2"></span><svg class="ico"><use href="#i-flecha"/></svg></a>
+        </div>
+        <p class="sala-pista" data-t="hero_scroll"></p>
+        <p class="sala-final" data-t="hero_final"></p>
+        <p class="sala-sin3d" data-t="sin3d"></p>
+      </div>
+
+      <nav class="horizonte" id="horizonte" aria-label="Halls"></nav>
+    </div>
+  </section>
+
+  <!-- ===================== THE SUN: SDG 5 + SDG 9 ===================== -->
+  <section class="seccion sol" id="sol">
+    <div class="envoltura">
+      <h2 data-t="sol_titulo"></h2>
+      <p class="intro" data-t="sol_intro"></p>
+    </div>
+    <div class="disco" id="disco">
+      <div class="disco-sol" aria-hidden="true"><span class="d-espejo"></span><span class="d-real"></span></div>
+      <article class="mitad mitad-9" id="mitad9"><h3></h3><p></p><a class="enlace-fuente" target="_blank" rel="noopener"></a></article>
+      <article class="mitad mitad-5" id="mitad5"><h3></h3><p></p><a class="enlace-fuente" target="_blank" rel="noopener"></a></article>
+    </div>
+    <div class="envoltura cadena-bloque">
+      <h3 class="sub" data-t="cadena_titulo"></h3>
+      <div class="cadena" id="cadena" role="tablist" aria-label="Steps"></div>
+      <div class="cadena-eco">
+        <p id="cadenaTexto" aria-live="polite" data-t="cadena_ayuda"></p>
+        <p class="eco" id="cadenaEco" aria-hidden="true"></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== DATA ===================== -->
+  <section class="seccion datos" id="datos">
+    <div class="envoltura">
+      <h2 data-t="datos_titulo"></h2>
+      <p class="intro" data-t="datos_intro"></p>
+      <ol class="filas" id="filasDatos"></ol>
+    </div>
+    <div class="gto">
+      <div class="envoltura">
+        <h2 data-t="gto_titulo"></h2>
+        <div class="gto-filas" id="filasGto"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PROJECTIONS 2050 ===================== -->
+  <section class="seccion p2050" id="p2050">
+    <div class="envoltura">
+      <h2 data-t="p2050_titulo"></h2>
+      <p class="intro" data-t="p2050_intro"></p>
+      <ol class="linea2050" id="linea2050"></ol>
+
+      <div class="escenario">
+        <div class="mini-sala" id="miniSala" aria-hidden="true">
+          <div class="sol-css"><span class="mitad-espejo"></span><span class="mitad-real"></span></div>
+          <svg class="gente" viewBox="0 0 600 120" preserveAspectRatio="xMidYMax meet" id="miniGente"></svg>
+        </div>
+        <div class="escenario-texto">
+          <h3 class="sub" data-t="escenario_titulo"></h3>
+          <p data-t="escenario_texto"></p>
+          <div class="interruptor" role="group">
+            <button id="btnSi" aria-pressed="true" data-t="escenario_boton_si"></button>
+            <button id="btnNo" aria-pressed="false" data-t="escenario_boton_no"></button>
+          </div>
+          <ul id="listaEscenario" class="lista-escenario" aria-live="polite"></ul>
+          <p class="nota" data-t="escenario_nota"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== MINI GAMES ===================== -->
+  <section class="seccion juegos" id="juegos">
+    <div class="envoltura">
+      <h2 data-t="juegos_titulo"></h2>
+      <p class="intro" data-t="juegos_intro"></p>
+      <div class="pestanas" role="tablist" aria-label="Mini games">
+        <button role="tab" aria-selected="true" aria-controls="j-trivia" id="t-trivia" data-t="tab_trivia"></button>
+        <button role="tab" aria-selected="false" aria-controls="j-ciudad" id="t-ciudad" data-t="tab_ciudad"></button>
+        <button role="tab" aria-selected="false" aria-controls="j-mito" id="t-mito" data-t="tab_mito"></button>
+        <button role="tab" aria-selected="false" aria-controls="j-memo" id="t-memo" data-t="tab_memo"></button>
+      </div>
+
+      <!-- Trivia -->
+      <div class="panel" role="tabpanel" id="j-trivia" aria-labelledby="t-trivia">
+        <div class="panel-top"><span class="marcador"><span data-t="trivia_puntos"></span>: <b id="triviaPuntos">0</b></span><span class="marcador" id="triviaCuenta"></span></div>
+        <div class="barra-avance"><span id="triviaBarra"></span></div>
+        <div id="triviaZona"></div>
+      </div>
+
+      <!-- Fair city 3D -->
+      <div class="panel" role="tabpanel" id="j-ciudad" aria-labelledby="t-ciudad" hidden>
+        <div class="ciudad">
+          <div class="ciudad-escena">
+            <canvas id="ciudadCanvas" aria-label="3D city" role="img"></canvas>
+            <p class="ciudad-girar" data-t="ciudad_girar"></p>
+          </div>
+          <div class="ciudad-control">
+            <h3 class="sub" data-t="ciudad_titulo"></h3>
+            <p class="ciudad-instr" data-t="ciudad_instrucciones"></p>
+            <div class="presupuesto"><span data-t="ciudad_presupuesto_texto"></span> <b id="ciudadRestante"></b><span class="monedas" id="monedas" aria-hidden="true"></span></div>
+            <div class="obras" id="obras"></div>
+            <div class="indicadores" id="indicadores"></div>
+            <p class="mensaje" id="ciudadMensaje" aria-live="polite"></p>
+            <button class="btn btn-borde-claro btn-chico" id="ciudadReiniciar" data-t="ciudad_reiniciar"></button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Myth or fact -->
+      <div class="panel" role="tabpanel" id="j-mito" aria-labelledby="t-mito" hidden>
+        <p class="mito-instr" data-t="mito_instrucciones"></p>
+        <div class="mito">
+          <span class="mito-lado izq" data-t="mito_boton_mito" aria-hidden="true"></span>
+          <div class="mito-pila" id="mitoPila"></div>
+          <span class="mito-lado der" data-t="mito_boton_realidad" aria-hidden="true"></span>
+        </div>
+        <div class="mito-botones">
+          <button class="btn btn-borde-claro" id="btnMito"><svg class="ico giro"><use href="#i-flecha"/></svg><span data-t="mito_boton_mito"></span></button>
+          <span class="marcador" id="mitoCuenta"></span>
+          <button class="btn btn-borde-claro" id="btnReal"><span data-t="mito_boton_realidad"></span><svg class="ico"><use href="#i-flecha"/></svg></button>
+        </div>
+        <div class="mito-resp" id="mitoResp" aria-live="polite"></div>
+      </div>
+
+      <!-- Memory game -->
+      <div class="panel" role="tabpanel" id="j-memo" aria-labelledby="t-memo" hidden>
+        <div class="panel-top">
+          <p class="memo-instr" data-t="memo_instrucciones"></p>
+          <span class="marcador"><span data-t="memo_movimientos"></span>: <b id="memoMov">0</b></span>
+          <button class="btn btn-borde-claro btn-chico" id="memoReiniciar" data-t="memo_reiniciar"></button>
+        </div>
+        <div class="memorama" id="tablero"></div>
+        <p class="memo-fin" id="memoFin" data-t="memo_ganaste" hidden></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== TAKE ACTION ===================== -->
+  <section class="seccion actua" id="actua">
+    <div class="envoltura">
+      <h2 data-t="actua_titulo"></h2>
+      <p class="intro" data-t="actua_intro"></p>
+      <ol class="filas filas-accion" id="filasAccion"></ol>
+
+      <div class="compromiso">
+        <form class="compromiso-form" id="formCompromiso" novalidate>
+          <h3 class="sub" data-t="compromiso_titulo"></h3>
+          <p data-t="compromiso_texto"></p>
+          <label class="campo-eti" for="nombre" data-t="compromiso_nombre"></label>
+          <input class="campo" id="nombre" maxlength="24" autocomplete="off">
+          <fieldset id="listaCompromisos"></fieldset>
+          <p class="error" id="compromisoError" role="alert" hidden data-t="compromiso_vacio"></p>
+          <button class="btn btn-sol" type="submit"><span data-t="compromiso_boton"></span><svg class="ico"><use href="#i-flecha"/></svg></button>
+          <p class="contador"><span data-t="compromiso_contador"></span> <b id="contadorSiluetas">0</b></p>
+        </form>
+        <div class="multitud">
+          <svg viewBox="0 0 800 300" id="multitud" role="img" aria-label="Silhouettes of the people who made a pledge"></svg>
+          <p class="multitud-msg" id="multitudMsg" aria-live="polite"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== LAW ===================== -->
+  <section class="seccion ley" id="ley">
+    <div class="envoltura">
+      <h2 data-t="ley_titulo"></h2>
+      <p class="intro" data-t="ley_intro"></p>
+      <div class="acordeon" id="acordeonLey"></div>
+    </div>
+  </section>
+
+  <!-- ===================== SOURCES ===================== -->
+  <section class="seccion fuentes" id="fuentes">
+    <div class="envoltura">
+      <h2 data-t="fuentes_titulo"></h2>
+      <p class="intro" data-t="fuentes_intro"></p>
+      <ol id="listaFuentes"></ol>
+    </div>
+  </section>
+
+  <footer class="pie">
+    <div class="envoltura pie-fila">
+      <img src="img/emblema.png" alt="" width="56" height="53">
+      <div><b data-t="sitio_nombre"></b><span data-t="footer_texto"></span></div>
+      <span data-t="footer_derechos"></span>
+    </div>
+  </footer>
+
+  <!-- 1) Excel data  2) Three.js (3D)  3) 3D scenes  4) Page logic -->
+  <script src="datos.js"></script>
+  <script src="vendor/three.min.js"></script>
+  <script src="js/sala3d.js"></script>
+  <script src="js/ciudad3d.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
